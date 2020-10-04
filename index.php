@@ -16,6 +16,10 @@
   <!-- Custom styles for this template -->
   <link href="css/blog-post.css" rel="stylesheet">
 
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+
+
 </head>
 
 <body>
