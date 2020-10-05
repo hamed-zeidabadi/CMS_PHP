@@ -12,6 +12,12 @@
         $content = $row['post_content'];
         $tags = $row['post_tags'];
 
+
+        // gregorian_to_jalali
+        list($year, $month, $day) = explode('-', $date);
+        include 'includes/jdf.php';
+        $persian_date = gregorian_to_jalali($year, $month, $day, '/');
+
     ?>
 
       <?php ?>
@@ -28,7 +34,7 @@
       <hr>
 
       <!-- Date/Time -->
-      <p><?php echo $date ?></p>
+      <p> آخرین بروزرسانی مقاله : <?php echo $persian_date ?></p>
 
       <hr>
 
