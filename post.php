@@ -1,40 +1,49 @@
-  <!-- Title -->
-  <h1 class="mt-4">Post Title</h1>
+  <?php
+    require_once 'includes/db.php';
 
-  <!-- Author -->
-  <p class="lead">
-      by
-      <a href="#">Start Bootstrap</a>
-  </p>
+    $sql_get_posts = 'SELECT * FROM posts_tbl ';
+    $query = mysqli_query($connect, $sql_get_posts);
+    while ($row = mysqli_fetch_assoc($query)) {
 
-  <hr>
+        $title = $row['post_title'];
+        $author = $row['post_author'];
+        $date = $row['post_date'];
+        $image = $row['post_image'];
+        $content = $row['post_content'];
+        $tags = $row['post_tags'];
 
-  <!-- Date/Time -->
-  <p>Posted on January 1, 2018 at 12:00 PM</p>
+    ?>
 
-  <hr>
+      <?php ?>
 
-  <!-- Preview Image -->
-  <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+      <!-- Title -->
+      <h1 style="font-size: 1.8em;" class="mt-4"><?php echo $title ?></h1>
 
-  <hr>
+      <!-- Author -->
+      <p style="font-size: 1em;" class="lead">
+          توسط
+          <a href="#"><?php echo $author ?></a>
+      </p>
 
-  <!-- Post Content -->
-  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut, error quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum minus inventore?</p>
+      <hr>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus, voluptatibus.</p>
+      <!-- Date/Time -->
+      <p><?php echo $date ?></p>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde eius illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim, iure!</p>
+      <hr>
 
-  <blockquote class="blockquote">
-      <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">Someone famous in
-          <cite title="Source Title">Source Title</cite>
-      </footer>
-  </blockquote>
+      <!-- Preview Image -->
+      <img class="img-fluid rounded" src="<?php echo $image ?>" alt="">
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>
+      <hr>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
+      <!-- Post Content -->
+      <p style="font-size: 1.2em;" class="lead"><?php echo $content ?></p>
 
-  <hr>
+      <hr>
+
+  <?php
+
+    };
+
+    ?>
