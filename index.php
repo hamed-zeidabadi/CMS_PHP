@@ -38,7 +38,9 @@
 
 
         <!-- Start Post Content -->
-        
+
+        <?php include 'post.php' ?>
+
         <!--  End Post Content -->
 
 
