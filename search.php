@@ -44,7 +44,10 @@
 
         if (!empty($search_text)) {
           require_once 'includes/db.php';
-          $sql_get_posts = "SELECT * FROM posts_tbl WHERE post_content LIKE '%$search_text%'";
+          $sql_get_posts =
+            "SELECT * FROM posts_tbl
+             WHERE post_content
+             LIKE '%$search_text%'";
           $query = mysqli_query($connect, $sql_get_posts);
           while ($row = mysqli_fetch_assoc($query)) {
 
@@ -92,10 +95,10 @@
         <?php
 
           };
-        }else{
-          echo '<h3 class ="m-3 h3 text-danger" >متاسفم ! چیزی پیدا نشد :( </h3>' ;
+        } else {
+          echo '<h3 class ="m-3 h3 text-danger" >متاسفم ! چیزی پیدا نشد :( </h3>';
         };
-        
+
 
 
         ?>
