@@ -80,7 +80,7 @@
               <div class="input-group">
                 <input style="font-size: 0.8em;" type="text" class="form-control" placeholder=" یه چی بنویس :)">
                 <span class="input-group-btn">
-                  <button style="font-size: 0.8em;" class="btn btn-secondary" type="button">بزن بریم !</button>
+                  <button style="font-size: 0.8em;margin-right: 4px;" class="btn btn-secondary" type="button">بزن بریم !</button>
                 </span>
               </div>
             </div>
