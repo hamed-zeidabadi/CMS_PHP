@@ -26,7 +26,7 @@
     <h1 style="font-size: 1.8em;" class="mt-4"><?php echo $title ?></h1>
 
     <!-- Author -->
-    <p style="font-size: 1em;" class="lead">
+    <p style="font-size: 1em; margin-top:1em ;" class="lead">
       توسط
       <a href="#"><?php echo $author ?></a>
     </p>
