@@ -4,22 +4,8 @@
 
 <!-- Mirrored from motrila.iranneginhotel.ir/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 09:33:29 GMT -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Title -->
-    <title>پنل مدیریت</title>
+<?php require_once 'head.php'  ?>
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.png">
-
-    <!-- These plugins only need for the run this page -->
-    <link rel="stylesheet" href="css/default-assets/notification.css">
-    <link rel="stylesheet" href="style.css">
-
-</head>
 
 <body>
     <!-- Preloader -->
@@ -117,57 +103,22 @@
                         <!-- Table with outer spacing -->
                         <div class="table-responsive">
                             <table class="table">
+
                                 <thead>
                                     <tr>
+                                        <th>شناسه</th>
                                         <th>نام</th>
-                                        <th>نرخ</th>
-                                        <th>مهارت</th>
-                                        <th>نوع</th>
-                                        <th>محل</th>
                                         <th>عمل</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="text-bold-500"><img class="chat-img mr-2 border-radius-50" src="img/member-img/1.png" alt="">جان راست</td>
-                                        <td>18 تومان در ساعت</td>
-                                        <td class="text-bold-500">UI / UX</td>
-                                        <td>نام محصول</td>
-                                        <td>داکا ، مالیات</td>
-                                        <td><a href="#"><i class="icon-envelope btn btn-info btn-circle"></i></a></td>
+
+                                        <td>01</td>
+                                        <td>جاوا</td>
+                                        <td><a href="#"><i class="zmdi zmdi-delete btn btn-danger btn-circle"></i></a></td>
                                     </tr>
-                                    <tr>
-                                        <td class="text-bold-500"><img class="chat-img mr-2 border-radius-50" src="img/member-img/2.png" alt=""> نام کاربر</td>
-                                        <td>15 تومان در ساعت</td>
-                                        <td class="text-bold-500">مفاهیم گرافیکی</td>
-                                        <td>نام محصول</td>
-                                        <td>هند ، مالیات</td>
-                                        <td><a href="#"><i class="icon-envelope btn btn-info btn-circle"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-bold-500"><img class="chat-img mr-2 border-radius-50" src="img/member-img/3.png" alt="">اسمیت بلاگ</td>
-                                        <td>14 تومان در ساعت</td>
-                                        <td class="text-bold-500">انیمیشن</td>
-                                        <td>نام محصول</td>
-                                        <td>آستین ، تگزاس</td>
-                                        <td><a href="#"><i class="icon-envelope btn btn-info btn-circle"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-bold-500"><img class="chat-img mr-2 border-radius-50" src="img/member-img/4.png" alt="">اشلی جون</td>
-                                        <td>18 تومان در ساعت</td>
-                                        <td class="text-bold-500">انیمیشن</td>
-                                        <td>نام محصول</td>
-                                        <td>تهران</td>
-                                        <td><a href="#"><i class="icon-envelope btn btn-info btn-circle"></i></a></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-bold-500"><img class="chat-img mr-2 border-radius-50" src="img/member-img/5.png" alt="">موش لارا</td>
-                                        <td>17 تومان در ساعت</td>
-                                        <td class="text-bold-500">انیمیشن</td>
-                                        <td>نام محصول</td>
-                                        <td>آستین ، تگزاس</td>
-                                        <td><a href="#"><i class="icon-envelope font-15 btn btn-info btn-circle"></i></a></td>
-                                    </tr>
+
                                 </tbody>
                             </table>
                         </div>

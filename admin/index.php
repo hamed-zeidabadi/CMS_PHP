@@ -4,23 +4,7 @@
 
 <!-- Mirrored from motrila.iranneginhotel.ir/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 09:33:29 GMT -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Title -->
-    <title>پنل مدیریت</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.png">
-
-    <!-- These plugins only need for the run this page -->
-    <link rel="stylesheet" href="css/default-assets/notification.css">
-
-    <link rel="stylesheet" href="style.css">
-
-</head>
+<?php require_once 'head.php'  ?>
 
 <body>
     <!-- Preloader -->
