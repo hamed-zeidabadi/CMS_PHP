@@ -58,22 +58,7 @@
 
 
     <!-- Setting Panel -->
-    <div class="theme-setting-wrapper">
-        <div id="settings-trigger"><i class="ti-settings font-17"></i></div>
-        <div id="theme-settings" class="settings-panel">
-            <i class="settings-close zmdi zmdi-close font-18 font-weight-bold"></i>
-            <p class="settings-heading font-18">رنگ منوی جانبی:</p>
-            <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
-                <div><span class="font-14 font-weight-bold">پیش فرض</span></div>
-            </div>
-            <div class="sidebar-bg-options" id="sidebar-light-theme">
-                <div><span class="font-14 font-weight-bold">روشن</span></div>
-            </div>
-            <div class="sidebar-bg-options" id="sidebar-color-theme">
-                <div><span class="font-14 font-weight-bold">رنگارنگ</span></div>
-            </div>
-        </div>
-    </div>
+    <?php include 'setting.php'  ?>
 
     <!-- ======================================
 ******* Page Wrapper Area Start **********
@@ -83,7 +68,7 @@
         <div class="ecaps-sidemenu-area">
             <!-- Desktop Logo -->
             <div class="ecaps-logo">
-                <a href="index-2.html"><img class="desktop-logo" src="img/core-img/logo.png" alt="لوگوی دسک تاپ"> <img class="small-logo" src="img/core-img/small-logo.png" alt="آرم موبایل"></a>
+                <a href="index.php"><img class="desktop-logo" src="img/shop-img/18.jpg" alt="لوگوی دسک تاپ"> <img class="small-logo" src="img/shop-img/18.jpg" alt="آرم موبایل"></a>
             </div>
 
             <!-- Side Nav -->
@@ -134,6 +119,5 @@
 
 </body>
 
-<!-- Mirrored from motrila.iranneginhotel.ir/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 09:33:29 GMT -->
 
 </html>
