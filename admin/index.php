@@ -93,7 +93,9 @@
             <!-- Main Content Area -->
             <div class="main-content">
                 <div class="container-fluid">
-                    <div class="height-800"></div>
+                    <!-- <div class="height-800">
+                    </div> -->
+                    <p>صفحه اصلی</p>
                 </div>
             </div>
         </div>

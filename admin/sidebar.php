@@ -4,8 +4,7 @@
 
 
           <li class="active"><a href="index.php"><i class="zmdi zmdi-view-dashboard"></i><span>داشبورد</span></a></li>
-
-
+          <li class="active"><a href="category.php"><i class="zmdi zmdi-view-dashboard"></i><span>دسته بندی ها</span></a></li>
 
           <!-- <li class="treeview">
               <a href="javascript:void(0)"><i class="zmdi zmdi-apps"></i> <span>برنامه ها</span> <i class="fa fa-angle-left"></i></a>
