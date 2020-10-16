@@ -104,6 +104,11 @@
                         <div class="table-responsive">
                             <table class="table">
 
+                     
+                            
+                            
+                            
+
                                 <thead>
                                     <tr>
                                         <th>شناسه</th>
@@ -112,12 +117,35 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
+                                   
+                                           <?php
+                                           
 
-                                        <td>01</td>
-                                        <td>جاوا</td>
+                    $sql_category = 'SELECT * FROM categories_tbl';
+                    $query = mysqli_query($connect, $sql_category);
+                    while ($row = mysqli_fetch_assoc($query)) {
+                         $category_id = $row['category_id'];
+                        $category_name = $row['category'];
+                    ?>
+                    
+                             
+                    
+
+
+                            <td><?php echo $category_id ?></td>
+                                        <td><?php echo $category_name ?></td>
                                         <td><a href="#"><i class="zmdi zmdi-delete btn btn-danger btn-circle"></i></a></td>
-                                    </tr>
+                                           </tr>
+
+                     <?php
+
+                    };
+
+                        ?>
+
+
+                                     
+                                 
 
                                 </tbody>
                             </table>
