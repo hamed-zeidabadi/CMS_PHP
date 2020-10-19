@@ -1,9 +1,3 @@
-<!doctype html>
-<html lang="en">
-
-
-<!-- Mirrored from motrila.iranneginhotel.ir/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 09:33:29 GMT -->
-
 <?php require_once 'head.php'  ?>
 
 <body>

@@ -1,20 +1,25 @@
- <?php require_once 'includes/db.php' ?>
+      <?php include_once 'includes/db.php' ?>
 
- <head>
-     <meta charset="UTF-8">
-     <meta name="description" content="">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-     <!-- Title -->
-     <title>پنل مدیریت</title>
+      <!doctype html>
+      <html lang="fa">
 
-     <!-- Favicon -->
-     <link rel="icon" href="img/core-img/favicon.png">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta name="description" content="">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <!-- Title -->
+          <title>پنل مدیریت</title>
 
-     <!-- These plugins only need for the run this page -->
-     <link rel="stylesheet" href="css/default-assets/notification.css">
+          <!-- Favicon -->
+          <link rel="icon" href="img/core-img/favicon.png">
 
-     <link rel="stylesheet" href="style.css">
-     <link rel="stylesheet" href="css/material-design-iconic-font.min.css">
+          <!-- These plugins only need for the run this page -->
+          <link type="text/css" rel="stylesheet" href="css/default-assets/notification.css">
+          <link type="text/css" rel="stylesheet" href="style.css">
+          <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+          <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css">
+          <link type="text/css" rel="stylesheet" href="css/material-design-iconic-font.min.css">
 
- </head>
+
+      </head>

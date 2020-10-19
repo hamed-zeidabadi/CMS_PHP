@@ -1,10 +1,6 @@
-<!doctype html>
-<html lang="en">
-
-
 <!-- Mirrored from motrila.iranneginhotel.ir/blank.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 02 Dec 2019 09:33:29 GMT -->
 
-<?php require_once 'head.php'  ?>
+<?php require 'head.php'  ?>
 
 
 <body>
@@ -79,24 +75,29 @@
             <div class="main-content">
                 <div class="container-fluid">
 
-
-
-
-
-
-
                     <div class="col-12 box-margin">
                         <div class="card">
                             <div class="card-body">
                                 <div class="widgets-todo-list-area">
-                                    <form id="form-add-todo" class="form-add-todo d-flex">
-                                        <input type="text" id="new-todo-item" class="new-todo-item" name="todo" placeholder="اضافه کردن">
-                                        <input type="submit" id="add-todo-item" class="add-todo-item" value="اضافه کردن">
+                                    <?php
+
+                                    if (isset($_POST['add_cat_btn'])) {
+                                        echo var_dump($_POST);
+                                    }
+
+                                    // $sql_add_cat = "INSERT INTO categories_tbl(category) VALUE category == {''}     "
+
+                                    ?>
+
+                                    <form action="category.php" method="post" id="form-add-todo" class="form-add-todo d-flex">
+                                        <input type="text" id="new-todo-item" class="new-todo-item" name="add_cat" placeholder="نام دسته بندی جدید را وارد کنید">
+                                        <input type="submit" id="add-todo-item" class="add-todo-item" name="add_cat_btn" value="اضافه کردن" form="form-add-todo">
                                     </form>
                                 </div>
                             </div>
                         </div>
                     </div>
+
 
                     <div class="card-body">
                         <h4 class="card-title">لیست دسته بندی ها</h4>
@@ -104,10 +105,6 @@
                         <div class="table-responsive">
                             <table class="table">
 
-                     
-                            
-                            
-                            
 
                                 <thead>
                                     <tr>
@@ -117,35 +114,27 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                   
-                                           <?php
-                                           
 
-                    $sql_category = 'SELECT * FROM categories_tbl';
-                    $query = mysqli_query($connect, $sql_category);
-                    while ($row = mysqli_fetch_assoc($query)) {
-                         $category_id = $row['category_id'];
-                        $category_name = $row['category'];
-                    ?>
-                    
-                             
-                    
+                                    <?php
 
 
-                            <td><?php echo $category_id ?></td>
+                                    $sql_category = 'SELECT * FROM categories_tbl';
+                                    $query = mysqli_query($connect, $sql_category);
+                                    while ($row = mysqli_fetch_assoc($query)) {
+                                        $category_id = $row['category_id'];
+                                        $category_name = $row['category'];
+                                    ?>
+
+                                        <td><?php echo $category_id ?></td>
                                         <td><?php echo $category_name ?></td>
                                         <td><a href="#"><i class="zmdi zmdi-delete btn btn-danger btn-circle"></i></a></td>
-                                           </tr>
+                                        </tr>
 
-                     <?php
+                                    <?php
 
-                    };
+                                    };
 
-                        ?>
-
-
-                                     
-                                 
+                                    ?>
 
                                 </tbody>
                             </table>
@@ -156,7 +145,7 @@
         </div>
     </div>
 
-    <!-- ======================================
+    <!-- ======================================o
 ********* Page Wrapper Area End ***********
 ======================================= -->
 
