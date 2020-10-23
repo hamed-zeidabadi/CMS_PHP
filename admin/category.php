@@ -81,20 +81,38 @@
                                 <div class="widgets-todo-list-area">
                                     <?php
 
-                                    $user_data = $_POST['add_cat'];
-                                    echo var_dump($_POST);;
+                                    // UPDATE CATEGORY
 
-                                    // if (isset($_GET["add_cat_btn"])) {
+                                    if ($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST['submit_btn'])) {
 
-                                    // }
-                                    // $sql_add_cat = "INSERT INTO categories_tbl(category) VALUE category == {''}     "
+                                        if (empty($_POST['add_cat'])) {
+                                            echo "<p class='alert alert-danger'> لطفا عنوان دسته بندی را وارد کنید ! </p>";
+                                        } else {
+
+                                            $sql_set_cat = " INSERT INTO 	categories_tbl(category) VALUES('{$_POST['add_cat']}') ";
+                                            if (mysqli_query($connect, $sql_set_cat)) {
+                                                echo "<p class='alert alert-success'>دسته بندی جدید با موفقیت اضافه شد </p>";
+                                            }
+                                        }
+                                    };
+
+
+                                    //DELETE CATEGORY
+                                    if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['delete'])) {
+
+                                        $sql_delete_cat = "DELETE FROM categories_tbl WHERE category_id={$_GET['delete']}";
+                                        if (mysqli_query($connect, $sql_delete_cat)) {
+                                            echo "<p class='alert alert-warning'> دسته بندی با موفقیت حذف شد </p>";
+                                        }
+                                    }
+
 
                                     ?>
                                     <!-- id="form-add-todo" -->
                                     <!-- id="add-todo-item"  -->
                                     <form action="category.php" id="form-add-todo" method="post" class="form-add-todo d-flex">
                                         <input type="text" id="new-todo-item" class="new-todo-item" name="add_cat" placeholder="نام دسته بندی جدید را وارد کنید">
-                                        <input type="submit" id="add-todo-item" class="add-todo-item" name="add_cat_btn" value="اضافه کردن" ">
+                                        <input type="submit" id="add-todo-item" name='submit_btn' class="add-todo-item" value="اضافه کردن">
                                     </form>
                                 </div>
                             </div>
@@ -103,70 +121,74 @@
 
 
                     <div class=" card-body">
-                                        <h4 class="card-title">لیست دسته بندی ها</h4>
-                                        <!-- Table with outer spacing -->
-                                        <div class="table-responsive">
-                                            <table class="table">
+                        <h4 class="card-title">لیست دسته بندی ها</h4>
+                        <!-- Table with outer spacing -->
+                        <div class="table-responsive">
+                            <table class="table">
 
 
-                                                <thead>
-                                                    <tr>
-                                                        <th>شناسه</th>
-                                                        <th>نام</th>
-                                                        <th>عمل</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
+                                <thead>
+                                    <tr>
+                                        <th>شناسه</th>
+                                        <th>نام</th>
+                                        <th>عمل</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
 
-                                                    <?php
+                                    <?php
 
 
-                                                    $sql_category = 'SELECT * FROM categories_tbl';
-                                                    $query = mysqli_query($connect, $sql_category);
-                                                    while ($row = mysqli_fetch_assoc($query)) {
-                                                        $category_id = $row['category_id'];
-                                                        $category_name = $row['category'];
-                                                    ?>
+                                    $sql_category = 'SELECT * FROM categories_tbl';
+                                    $query = mysqli_query($connect, $sql_category);
+                                    while ($row = mysqli_fetch_assoc($query)) {
+                                        $category_id = $row['category_id'];
+                                        $category_name = $row['category'];
+                                    ?>
 
-                                                        <td><?php echo $category_id ?></td>
-                                                        <td><?php echo $category_name ?></td>
-                                                        <td><a href="#"><i class="zmdi zmdi-delete btn btn-danger btn-circle"></i></a></td>
-                                                        </tr>
+                                        <td><?php echo $category_id ?></td>
+                                        <td><?php echo $category_name ?></td>
 
-                                                    <?php
+                                        <?php echo  "<td> <a href='category.php?delete={$category_id}' <i class='zmdi zmdi-delete btn btn-danger btn-circle'></i> </a> </td>" ?>
 
-                                                    };
+                                        </tr>
 
-                                                    ?>
+                                    <?php
 
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                </div>
-                            </div>
+                                    };
+
+
+
+                                    ?>
+
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <!-- ======================================o
+    <!-- ======================================o
 ********* Page Wrapper Area End ***********
 ======================================= -->
 
-                <!-- Must needed plugins to the run this Template -->
-                <script src="js/jquery.min.js"></script>
-                <script src="js/popper.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-                <script src="js/bundle.js"></script>
-                <script src="js/default-assets/setting.js"></script>
-                <script src="js/default-assets/fullscreen.js"></script>
+    <!-- Must needed plugins to the run this Template -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bundle.js"></script>
+    <script src="js/default-assets/setting.js"></script>
+    <script src="js/default-assets/fullscreen.js"></script>
 
-                <!-- Active JS -->
-                <script src="js/default-assets/active.js"></script>
-                <script src="js/default-assets/bootstrap-growl.js"></script>
-                <script src="js/default-assets/notification-active.js"></script>
-                <!-- These plugins only need for the run this page -->
-                <script src="js/default-assets/todolist.js"></script>
-                <script src="js/default-assets/bootstrap-growl.js"></script>
+    <!-- Active JS -->
+    <script src="js/default-assets/active.js"></script>
+    <script src="js/default-assets/bootstrap-growl.js"></script>
+    <script src="js/default-assets/notification-active.js"></script>
+    <!-- These plugins only need for the run this page -->
+    <script src="js/default-assets/todolist.js"></script>
+    <script src="js/default-assets/bootstrap-growl.js"></script>
 
 
 </body>
